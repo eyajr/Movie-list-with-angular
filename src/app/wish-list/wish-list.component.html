@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="movie-card" *ngFor="let movie of myWishList">
+
+    <a [routerLink]="['/movie',movie.id]">
+      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{movie.poster_path}}"/>
+      <h4>{{movie.title}}</h4>
+    </a>
+  </div>
+</div>

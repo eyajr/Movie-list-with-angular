@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<div *ngIf="selectedMovie" class="container">
+  <div class="container">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{selectedMovie.poster_path}}"/>
+  </div>
+
+  <div>
+    <div class="head">
+      <h2>{{selectedMovie.title}}</h2>
+      <button class="btn-add" (click)="addToWishList(selectedMovie)">
+        Add to Wishlist
+      </button>
+    </div>
+
+    <p>
+      <span>Original Title</span> {{selectedMovie.original_title}}<br>
+      <span>Original Language</span> {{selectedMovie.original_language}}<br>
+      <span>Release Date </span> {{selectedMovie.release_date|date:'MMM dd, yyyy'}}<br>
+      <span>Popularity</span> {{selectedMovie.popularity}}<br>
+      <span>Vote Average</span> {{selectedMovie.vote_average}}<br>
+      <span>Vote Count</span> {{selectedMovie.vote_count}}<br>
+      <span>Overview</span> <br> {{selectedMovie.overview}}<br>
+    </p>
+  </div>
+
+</div>

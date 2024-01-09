@@ -1,0 +1,37 @@
+header {
+  background-color: #3586ff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color: black;
+  margin-left: 12px;
+}
+
+.wishlist-button {
+  background-color: black;
+  color:#3586ff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: auto;
+
+
+}
+
+.wishlist-button i {
+  margin-right: 5px;
+}
+.wishlist-button button{
+  background-color: black;
+  border: 0cap;
+
+}
+
+a{
+text-decoration: none;
+}

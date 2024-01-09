@@ -1,0 +1,52 @@
+<app-search-bar (selectMovieEvent)="updateMovieList($event)"></app-search-bar>
+
+<div class="container">
+
+
+<div *ngIf="selectedMovieList; else allmovies">
+
+  <div class="movie-card" *ngFor="let movie of selectedMovieList" class="container">
+      <a [routerLink]="['movie',movie.id]">
+
+
+      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{movie.poster_path}}"/>
+      <h4>{{movie.title}}</h4>
+    </a>
+</div>
+
+
+
+</div>
+
+
+<ng-template #allmovies class="container">
+
+
+
+
+  <div class="movie-card" *ngFor="let movie of movieList">
+
+    <a [routerLink]="['/movie',movie.id]">
+      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{movie.poster_path}}"/>
+      <h4>{{movie.title}}</h4>
+    </a>
+  </div>
+
+
+
+</ng-template>
+</div>
+
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+
+
+  <p>&copy;2023 Eya Ajroud | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
